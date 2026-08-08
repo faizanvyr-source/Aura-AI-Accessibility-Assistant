@@ -1,0 +1,51 @@
+{
+  "entities": {
+    "users": {
+      "title": "User Profiles",
+      "description": "User profile data and preferences",
+      "properties": {
+        "displayName": { "type": "string" },
+        "email": { "type": "string" },
+        "createdAt": { "type": "number" },
+        "theme": { "type": "string" },
+        "voiceRate": { "type": "number text" },
+        "voicePitch": { "type": "number" }
+      },
+      "required": ["email", "createdAt"]
+    },
+    "users/{userId}/knownPeople": {
+      "title": "Enrolled Face Profiles",
+      "description": "Saved face recognition profiles for a user",
+      "properties": {
+        "name": { "type": "string" },
+        "relationship": { "type": "string" },
+        "imageDataUrl": { "type": "string" },
+        "createdAt": { "type": "number" }
+      },
+      "required": ["name", "imageDataUrl", "createdAt"]
+    },
+    "users/{userId}/scanHistory": {
+      "title": "Scan History",
+      "description": "Saved visual AI scan logs for a user",
+      "properties": {
+        "timestamp": { "type": "number" },
+        "mode": { "type": "string" },
+        "text": { "type": "string" },
+        "imageThumbnail": { "type": "string" }
+      },
+      "required": ["timestamp", "mode", "text"]
+    },
+    "users/{userId}/emergencyContacts": {
+      "title": "Emergency Contacts",
+      "description": "Saved emergency contacts for triggering alerts",
+      "properties": {
+        "name": { "type": "string" },
+        "phone": { "type": "string" },
+        "email": { "type": "string" },
+        "relationship": { "type": "string" },
+        "createdAt": { "type": "number" }
+      },
+      "required": ["name", "phone", "createdAt"]
+    }
+  }
+}

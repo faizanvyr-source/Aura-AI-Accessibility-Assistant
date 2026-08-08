@@ -1,0 +1,12 @@
+{
+  "name": "Aura AI Accessibility Assistant",
+  "description": "AI-powered voice and visual assistance for visually impaired users featuring text reading, object identification, scene description, voice commands, and accessible high-contrast mobile controls.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
